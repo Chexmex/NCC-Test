@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="northwindModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="northwindEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="EmployeeGetList" ReturnType="Collection(northwindModel.EmployeeGetList_Result)">
+      <Parameter Name="active" Mode="In" Type="Boolean" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="EmployeeGetList_Result">
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TitleOfCourtesy" Nullable="true" MaxLength="25" />
+    <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="HireDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="Region" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="HomePhone" Nullable="true" MaxLength="24" />
+    <Property Type="String" Name="Extension" Nullable="true" MaxLength="4" />
+    <Property Type="Binary" Name="Photo" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Notes" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="ReportsTo" Nullable="true" />
+    <Property Type="String" Name="PhotoPath" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+    <Property Type="DateTime" Name="Term_date" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>
